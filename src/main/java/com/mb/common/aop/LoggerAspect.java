@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
 
-import com.mb.common.exception.CustomException;
 
 /**
  * AOP logger for logging the service, controller and dao all methods before and
@@ -79,23 +78,27 @@ public class LoggerAspect {
 	 * @param joinPoint
 	 * @param e
 	 */
-	@AfterThrowing(value = CONTROLLER_EXPRESSION, throwing = "throwable")
-	public void logAfterThrowing(JoinPoint joinPoint, Throwable throwable) {
-		log.warn("exception has been thrown in {}.{} method", joinPoint.getSignature().getDeclaringType(),
-				joinPoint.getSignature().getName());
-		if (throwable instanceof CustomException customException) {
-			if (customException.getHttpStatus() != null
-					&& customException.getHttpStatus().equals(HttpStatus.INTERNAL_SERVER_ERROR)) {
-				log.error("internal server error :: {}, detail :: {}", customException.getMessage(),
-						customException.getDetail());
-			} else {
-				log.warn("caught exception message :: {}, detail :: {}", customException.getMessage(),
-						customException.getDetail());
-			}
-		} else {
-			log.error("uncaught exception message :: {}", throwable.getMessage());
-		}
-	}
+	// @AfterThrowing(value = CONTROLLER_EXPRESSION, throwing = "throwable")
+	// public void logAfterThrowing(JoinPoint joinPoint, Throwable throwable) {
+	// log.warn("exception has been thrown in {}.{} method",
+	// joinPoint.getSignature().getDeclaringType(),
+	// joinPoint.getSignature().getName());
+	// if (throwable instanceof CustomException customException) {
+	// if (customException.getHttpStatus() != null
+	// && customException.getHttpStatus().equals(HttpStatus.INTERNAL_SERVER_ERROR))
+	// {
+	// log.error("internal server error :: {}, detail :: {}",
+	// customException.getMessage(),
+	// customException.getDetail());
+	// } else {
+	// log.warn("caught exception message :: {}, detail :: {}",
+	// customException.getMessage(),
+	// customException.getDetail());
+	// }
+	// } else {
+	// log.error("uncaught exception message :: {}", throwable.getMessage());
+	// }
+	// }
 
 	/**
 	 * log the time taken by method to execute
