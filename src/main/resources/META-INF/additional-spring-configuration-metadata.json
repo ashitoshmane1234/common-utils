@@ -1,0 +1,62 @@
+{"properties": [
+  {
+    "name": "access.token.expiry.in.ms",
+    "type": "java.lang.String",
+    "description": "A description for 'access.token.expiry.in.ms'"
+  },
+  {
+    "name": "refresh.token.expiry.in.ms",
+    "type": "java.lang.String",
+    "description": "A description for 'refresh.token.expiry.in.ms'"
+  },
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.secret'"
+  },
+  {
+    "name": "private.key.name",
+    "type": "java.lang.String",
+    "description": "A description for 'private.key.name'"
+  },
+  {
+    "name": "public.key.name",
+    "type": "java.lang.String",
+    "description": "A description for 'public.key.name'"
+  },
+  {
+    "name": "build.version",
+    "type": "java.lang.String",
+    "description": "A description for 'build.version'"
+  },
+  {
+    "name": "app.version",
+    "type": "java.lang.String",
+    "description": "A description for 'app.version'"
+  },
+  {
+    "name": "app.name",
+    "type": "java.lang.String",
+    "description": "A description for 'app.name'"
+  },
+  {
+    "name": "app.artifact.id",
+    "type": "java.lang.String",
+    "description": "A description for 'app.artifact.id'"
+  },
+  {
+    "name": "app.group.id",
+    "type": "java.lang.String",
+    "description": "A description for 'app.group.id'"
+  },
+  {
+    "name": "app.java.version",
+    "type": "java.lang.String",
+    "description": "A description for 'app.java.version'"
+  },
+  {
+    "name": "app.spring.boot.version",
+    "type": "java.lang.String",
+    "description": "A description for 'app.spring.boot.version'"
+  }
+]}
